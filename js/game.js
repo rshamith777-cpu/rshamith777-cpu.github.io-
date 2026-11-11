@@ -477,3 +477,4 @@ class ArcadeGame {
 }
 
 window.ArcadeGame = ArcadeGame;
+

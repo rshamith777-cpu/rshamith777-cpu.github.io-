@@ -1,122 +1,166 @@
-# 🎮 CyberPulse — Interactive Cyberpunk Developer Portfolio
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,24,30&height=220&section=header&text=SHAMITH%20R&fontSize=52&fontAlignY=38&desc=CYBERPUNK%20PORTFOLIO%20%7C%20LEVEL%2042%20ARCHITECT&descAlignY=62&descAlign=50&fontColor=00F3FF&animation=twinkling" width="100%" alt="Header" />
+</p>
 
-An interactive, game-inspired developer portfolio with real-time GitHub integration, physics-based hanging badge simulation, playable retro arcade mini-game, and multi-theme cyberpunk aesthetics.
+<!-- HANGING LANYARD & ID BADGE SECTION -->
+<div align="center">
 
-![Interactive Portfolio Preview](https://img.shields.io/badge/Status-Live%20GitHub%20Sync-00f3ff?style=for-the-badge&logo=github)
-![Physics Engine](https://img.shields.io/badge/Physics-Verlet%20Lanyard-ff0055?style=for-the-badge)
-![Audio](https://img.shields.io/badge/Sound-Web%20Audio%20API-fcee0a?style=for-the-badge)
+```text
+       ║                 ║                 ║
+       ║ [LANYARD CORD]  ║  [SECURITY KEY] ║
+       ▼                 ▼                 ▼
+  ┌──────────────────────────────────────────────┐
+  │ 🪪 VIP ACCESS CLEARANCE: LEVEL 5 TOP SECRET  │
+  │ NAME: SHAMITH R        RANK: CYBER ARCHITECT │
+  │ CLASS: FULL-STACK MAGE STATUS: 🟢 LIVE & CODING│
+  └──────────────────────────────────────────────┘
+```
+
+<a href="https://github.com/rshamith777-cpu">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=20&duration=2500&pause=1000&color=00F3FF&center=true&vCenter=true&multiline=true&width=550&height=70&lines=⚡+INITIALIZING+CYBERPUNK+PORTFOLIO...;🎮+ARCADE+MODE:+ONLINE;🔄+AUTO-SYNCING+PROJECTS+FROM+GITHUB...;🚀+READY+FOR+PRODUCTION+DEPLOYMENT!" alt="Typing SVG" />
+</a>
+
+<!-- HANGING CHARM BADGES -->
+<p align="center">
+  <img src="https://img.shields.io/badge/⛓️_HANGING_BADGE-PHYSICS_ENABLED-00f3ff?style=for-the-badge&logo=codepen&logoColor=black" alt="Badge" />
+  <img src="https://img.shields.io/badge/🕹️_ARCADE_MODE-ONLINE-ff0055?style=for-the-badge&logo=nintendo-switch&logoColor=white" alt="Arcade" />
+  <img src="https://img.shields.io/badge/📡_GIT_PUSH_RADAR-AUTO--UPDATED-fcee0a?style=for-the-badge&logo=github&logoColor=black" alt="Auto Sync" />
+</p>
+
+</div>
 
 ---
 
-## ⚡ Highlights & Key Features
+### 🎮 Player 1 HUD // Character Stats
 
-### 🪪 1. Interactive Physics Hanging Lanyard Badge
-- **Realistic Pendulum Physics**: Simulates rope tension, gravity, spring elasticity, and momentum swinging.
-- **Drag & Flick**: Grab the ID card with your mouse/touch, swing it around, and fling it with momentum!
-- **3D Holographic Foil**: Reflects cursor movement with dynamic prismatic sheen and 3D card perspective tilt.
-- **Card Flip**: Double-click or click **"Flip Card"** to reveal your secret clearance, credentials, and social links.
+<div align="center">
 
-### 🔄 2. Live GitHub Sync & Auto-Update on Push
-- **Zero-Build Real-Time Updates**: Directly queries the GitHub REST API (`/users/{username}/repos?sort=updated`).
-- **Instant Push Promotion**: The second you push code to any repo on GitHub, it automatically jumps to the #1 spot in the portfolio with a glowing **`⚡ RECENTLY PUSHED`** badge!
-- **Auto-Sync Polling**: Polls GitHub periodically (configurable in `js/config.js`) so open browser tabs update dynamically.
-- **Smart Fallback Caching**: Uses `localStorage` with offline resilience and rate-limit handling so your portfolio never goes down.
-- **Instant Search & Language Filters**: Real-time filtering by programming language, tech stack, or topic tags.
+| STAT | GAUGE | VALUE |
+| :--- | :--- | :---: |
+| ❤️ **HEALTH (HP)** | `████████████████████` | **100%** |
+| ⚡ **ENERGY (MANA)** | `██████████████████░░` | **92%** |
+| ⭐ **EXPERIENCE (XP)** | `███████████████░░░░░` | **LVL 42** |
+| 🛡️ **DEFENSE** | `CLEAN ARCHITECTURE` | **S-TIER** |
+| ⚔️ **SPECIAL WEAPON** | `FULL-STACK WEB & ENGINES` | **MAX** |
 
-### 🕹️ 3. Playable Retro Arcade Mini-Game ("Git Defender")
-- Embedded 2D retro space shooter built directly on HTML5 Canvas.
-- Blast incoming **Bugs** 🐛, **Merge Conflicts** 💥, and **404 Errors** ⚠️.
-- Collect **Git Star Coins** ⭐ to rack up bonus points.
-- High score tracking saved in your browser.
-
-### 🏆 4. Quest & Achievement Badges
-- Unlockable trophies with celebratory toast alerts and chimes:
-  - 🌟 **First Contact** (Visited portfolio)
-  - 🎯 **Kinetic Master** (Swung hanging badge 8+ times)
-  - 💳 **Hacker Identity** (Flipped badge to view credentials)
-  - 📡 **GitHub Uplink** (Established live API sync)
-  - 🕹️ **Insert Coin** (Launched retro arcade mini-game)
-  - 👾 **Bug Exterminator** (Scored 300+ in Git Defender)
-  - 🎨 **Chameleon** (Switched themes)
-  - 🧭 **Code Cartographer** (Filtered repositories)
-  - 💻 **Terminal Root** (Used CLI terminal commands)
-
-### 🔊 5. Procedural Web Audio FX
-- Authentic 8-bit chiptune sound effects generated dynamically using the **Web Audio API** (no external MP3/WAV files needed, zero latency).
-- Toggle sound on/off anytime with persistent memory.
-
-### 🎨 6. Four Cyberpunk Themes
-- **Cyberpunk 2077 Neon** (Deep dark obsidian, electric cyan & neon pink)
-- **80s Synthwave** (Midnight violet, hot magenta & sunset orange)
-- **Matrix Terminal** (Pitch black & phosphor green)
-- **Cosmic Nebula** (Deep sapphire, starlight lilac & celestial blue)
-
-### 💻 7. Interactive Hacker Terminal (CLI Mode)
-- Press **`~`** (tilde) or click the **CLI** button to launch the terminal HUD.
-- Commands: `help`, `repos`, `skills`, `theme <name>`, `user <username>`, `play`, `clear`.
+</div>
 
 ---
 
-## 🚀 Quick Setup & Deployment to GitHub Pages
+### 🐍 Contribution Arcade // Snake Game
 
-### Step 1: Customize Your Details
-Open [`js/config.js`](file:///c:/Users/gunas/OneDrive/Desktop/Github%20portfolio/js/config.js) and set your GitHub username:
-```javascript
-const CONFIG = {
-  githubUsername: "rshamith777-cpu", // Your GitHub handle here
-  name: "Shamith R",
-  roleTitle: "Creative Full-Stack Developer",
-  ...
-};
-```
-
-### Step 2: Push to GitHub
-In your project directory terminal:
-```bash
-git init
-git add .
-git commit -m "feat: initial interactive cyberpunk portfolio"
-git branch -M main
-git remote add origin https://github.com/rshamith777-cpu/portfolio.git  # Replace with your repo URL
-git push -u origin main
-```
-
-### Step 3: Enable GitHub Pages (Takes 10 Seconds)
-1. Go to your repository on **GitHub** > **Settings** > **Pages**.
-2. Under **Build and deployment** > **Source**, choose **GitHub Actions** (the included `.github/workflows/deploy.yml` will deploy automatically on every push!).
-3. Your interactive portfolio is now live at:  
-   `https://<your-username>.github.io/<repo-name>/` (or custom domain).
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rshamith777-cpu/rshamith777-cpu.github.io-/main/dist/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rshamith777-cpu/rshamith777-cpu.github.io-/main/dist/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake Game" src="https://raw.githubusercontent.com/rshamith777-cpu/rshamith777-cpu.github.io-/main/dist/github-contribution-grid-snake-dark.svg" width="100%">
+  </picture>
+</p>
 
 ---
 
-## 📂 Project Structure
+### 🔄 Live Repositories // Auto-Updated on Push
 
-```
-├── .github/
-│   └── workflows/
-│       └── deploy.yml        # GitHub Actions continuous deployment
-├── css/
-│   ├── style.css             # Main design system, themes, and layout
-│   ├── badge.css             # 3D hanging badge & lanyard styling
-│   └── game.css              # Arcade cabinet, CRT screen & terminal HUD
-├── js/
-│   ├── config.js             # Configuration for user, links & skills
-│   ├── audio.js              # Procedural Web Audio synthesizer
-│   ├── physics-badge.js      # Verlet pendulum physics & lanyard canvas
-│   ├── github-api.js         # Live GitHub REST API & auto-updater
-│   ├── game.js               # Git Defender retro arcade shooter
-│   ├── achievements.js       # Trophy case & quest unlock engine
-│   └── app.js                # Main controller & event bindings
-├── index.html                # Portfolio application entry
-└── README.md                 # Project documentation
-```
+> [!NOTE]
+> ⚡ **This table is auto-updated automatically by GitHub Actions.** Whenever I push code to any repo, it updates here in real-time!
+
+<!-- RECENT_REPOS:START -->
+
+| ⚡ Project / Repository | 🛠️ Tech Stack | ⭐ Stars | 🕒 Last Pushed |
+| :--- | :--- | :---: | :--- |
+| [**rshamith777-cpu.github.io-**](https://github.com/rshamith777-cpu/rshamith777-cpu.github.io-) `🔥 RECENT`<br><sub>Interactive designing portfolio with hanging badge physics and live sync...</sub> | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `Just now` |
+
+*Last auto-synchronized with GitHub*
+
+<!-- RECENT_REPOS:END -->
 
 ---
 
-## 🛠️ Tech Stack
-- **Pure Modern Web Technologies**: HTML5, Modern CSS3 (Grid/Flexbox/CSS Variables), Vanilla ES6+ JavaScript.
-- **Physics**: Verlet integration / Pendulum equations for the lanyard strap.
-- **Audio**: Web Audio API oscillator nodes & gain envelopes.
-- **Graphics**: HTML5 2D Canvas for lanyard rope & particle field.
-- **API**: GitHub REST API v3 with client-side polling and caching.
-- **DevOps**: GitHub Actions CI/CD to GitHub Pages.
+### 🧰 Skill Tree // Inventory & Equipments
+
+<div align="center">
+
+```text
+ ╔══════════════════════════════════════════════════════════════════════════╗
+ ║                         ⚡ ARSENAL & SKILL TREE                          ║
+ ╚══════════════════════════════════════════════════════════════════════════╝
+```
+
+#### 🌐 Frontend Sorcery
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+</p>
+
+#### ⚙️ Backend Mastery & Engines
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST_APIs-0284C7?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Canvas_2D-FF6B6B?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/Web_Audio_API-00F3FF?style=for-the-badge&logo=soundcharts&logoColor=black" />
+</p>
+
+#### 🛠️ DevOps & Arsenal
+<p align="center">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+</p>
+
+</div>
+
+---
+
+### 🏆 Quest Log // Interactive Objectives
+
+<details open>
+  <summary><b>📜 [MAIN QUEST] Code & Deploy Scalable Web Systems (COMPLETED)</b></summary>
+  <br>
+  Built and published high performance reactive client interfaces, real-time API integrations, and cloud continuous deployment pipelines.
+</details>
+
+<details open>
+  <summary><b>🗡️ [SIDE QUEST] Canvas & Physics Mini-Game Engines (ACTIVE)</b></summary>
+  <br>
+  Engineered Verlet integration pendulum physics simulations, collision detection, and chiptune sound synthesis via Web Audio API.
+</details>
+
+<details>
+  <summary><b>🔮 [SECRET QUEST] Click to Reveal Clearance Credentials</b></summary>
+  <br>
+  
+  ```bash
+  $ access-level --verify rshamith777-cpu
+  > Clearance: GRANTED.
+  > Direct Uplink: rshamith777@gmail.com
+  > Coordinates: GitHub Global Hub
+  ```
+</details>
+
+---
+
+### 📊 Real-Time Battle Statistics
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=rshamith777-cpu&show_icons=true&theme=tokyonight&hide_border=false&border_color=00f3ff&title_color=00f3ff&icon_color=ff0055&text_color=94a3b8" width="48%" alt="Stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rshamith777-cpu&layout=compact&theme=tokyonight&hide_border=false&border_color=ff0055&title_color=ff0055" width="48%" alt="Top Languages" />
+
+<br><br>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=rshamith777-cpu&theme=tokyonight&hide_border=false&border_color=fcee0a&stroke=fcee0a&background=0a0b10" width="97%" alt="Streak" />
+
+</div>
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,24,30&height=100&section=footer" width="100%" alt="Footer" />
+</p>

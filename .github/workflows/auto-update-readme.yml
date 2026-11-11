@@ -1,0 +1,54 @@
+name: Auto-Update Portfolio README
+
+on:
+  schedule:
+    # Runs every 6 hours automatically
+    - cron: '0 */6 * * *'
+  push:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-portfolio-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Contribution Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: rshamith777-cpu
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+        continue-on-error: true
+
+      - name: Fetch Live GitHub Projects & Update README
+        env:
+          GH_USERNAME: rshamith777-cpu
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/update-readme.js
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md dist/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes detected. Skipping commit."
+          else
+            git commit -m "🤖 auto-update: synced latest pushed projects & game stats [skip ci]"
+            git push origin main
+          fi

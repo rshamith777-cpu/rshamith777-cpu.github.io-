@@ -58,3 +58,4 @@ const CONFIG = {
 };
 
 window.PORTFOLIO_CONFIG = CONFIG;
+

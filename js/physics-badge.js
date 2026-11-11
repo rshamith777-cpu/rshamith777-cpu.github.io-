@@ -332,3 +332,4 @@ class HangingBadge {
 }
 
 window.HangingBadge = HangingBadge;
+

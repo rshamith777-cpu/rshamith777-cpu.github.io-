@@ -112,3 +112,4 @@ class AchievementEngine {
 }
 
 window.achievements = new AchievementEngine();
+
