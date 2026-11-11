@@ -1,31 +1,24 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,24,30&height=220&section=header&text=SHAMITH%20R&fontSize=52&fontAlignY=38&desc=CYBERPUNK%20PORTFOLIO%20%7C%20LEVEL%2042%20ARCHITECT&descAlignY=62&descAlign=50&fontColor=00F3FF&animation=twinkling" width="100%" alt="Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,24,30&height=200&section=header&text=SHAMITH%20R&fontSize=52&fontAlignY=38&desc=CYBERPUNK%20PORTFOLIO%20%7C%20LEVEL%2042%20ARCHITECT&descAlignY=62&descAlign=50&fontColor=00F3FF&animation=twinkling" width="100%" alt="Header" />
 </p>
 
-<!-- HANGING LANYARD & ID BADGE SECTION -->
+<!-- ANIMATED HANGING LANYARD ID BADGE -->
 <div align="center">
 
-```text
-       ║                 ║                 ║
-       ║ [LANYARD CORD]  ║  [SECURITY KEY] ║
-       ▼                 ▼                 ▼
-  ┌──────────────────────────────────────────────┐
-  │ 🪪 VIP ACCESS CLEARANCE: LEVEL 5 TOP SECRET  │
-  │ NAME: SHAMITH R        RANK: CYBER ARCHITECT │
-  │ CLASS: FULL-STACK MAGE STATUS: 🟢 LIVE & CODING│
-  └──────────────────────────────────────────────┘
-```
+  <img src="https://raw.githubusercontent.com/rshamith777-cpu/rshamith777-cpu.github.io-/main/assets/hanging-badge.svg" width="340" alt="Interactive Hanging Lanyard Badge" />
 
-<a href="https://github.com/rshamith777-cpu">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=20&duration=2500&pause=1000&color=00F3FF&center=true&vCenter=true&multiline=true&width=550&height=70&lines=⚡+INITIALIZING+CYBERPUNK+PORTFOLIO...;🎮+ARCADE+MODE:+ONLINE;🔄+AUTO-SYNCING+PROJECTS+FROM+GITHUB...;🚀+READY+FOR+PRODUCTION+DEPLOYMENT!" alt="Typing SVG" />
-</a>
+  <br>
 
-<!-- HANGING CHARM BADGES -->
-<p align="center">
-  <img src="https://img.shields.io/badge/⛓️_HANGING_BADGE-PHYSICS_ENABLED-00f3ff?style=for-the-badge&logo=codepen&logoColor=black" alt="Badge" />
-  <img src="https://img.shields.io/badge/🕹️_ARCADE_MODE-ONLINE-ff0055?style=for-the-badge&logo=nintendo-switch&logoColor=white" alt="Arcade" />
-  <img src="https://img.shields.io/badge/📡_GIT_PUSH_RADAR-AUTO--UPDATED-fcee0a?style=for-the-badge&logo=github&logoColor=black" alt="Auto Sync" />
-</p>
+  <a href="https://github.com/rshamith777-cpu">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=20&duration=2500&pause=1000&color=00F3FF&center=true&vCenter=true&multiline=true&width=550&height=70&lines=⚡+INITIALIZING+CYBERPUNK+PORTFOLIO...;🎮+ARCADE+MODE:+ONLINE;🔄+AUTO-SYNCING+PROJECTS+FROM+GITHUB...;🚀+READY+FOR+PRODUCTION+DEPLOYMENT!" alt="Typing SVG" />
+  </a>
+
+  <!-- HANGING CHARM BADGES -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/⛓️_HANGING_BADGE-SWINGING_PHYSICS-00f3ff?style=for-the-badge&logo=codepen&logoColor=black" alt="Badge" />
+    <img src="https://img.shields.io/badge/🕹️_ARCADE_MODE-ONLINE-ff0055?style=for-the-badge&logo=nintendo-switch&logoColor=white" alt="Arcade" />
+    <img src="https://img.shields.io/badge/📡_GIT_PUSH_RADAR-AUTO--UPDATED-fcee0a?style=for-the-badge&logo=github&logoColor=black" alt="Auto Sync" />
+  </p>
 
 </div>
 
