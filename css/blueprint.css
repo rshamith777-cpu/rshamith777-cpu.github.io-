@@ -479,12 +479,55 @@ body {
   letter-spacing: 1px;
 }
 
-/* FILTER CONTROLS BAR */
+/* FILTER CONTROLS BAR & SEARCH INPUT */
+.blueprint-controls-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  background: rgba(7, 53, 93, 0.45);
+  border: 1px solid var(--grid-line-bold);
+  padding: 16px 20px;
+  backdrop-filter: blur(4px);
+}
+
+.blueprint-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(5, 38, 66, 0.85);
+  border: 1px solid var(--grid-line-bold);
+  padding: 8px 14px;
+  min-width: 300px;
+  font-family: var(--font-mono);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.blueprint-search-box:focus-within {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+.blueprint-search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  width: 100%;
+}
+
+.blueprint-search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
 .blueprint-filter-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 32px;
+  gap: 8px;
 }
 
 .dwg-filter-btn {
@@ -495,7 +538,10 @@ body {
   font-family: var(--font-mono);
   font-size: 11px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .dwg-filter-btn:hover, .dwg-filter-btn.active {
@@ -503,6 +549,23 @@ body {
   color: var(--blueprint-blue);
   font-weight: 700;
   border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dwg-filter-btn.active .repo-count-badge {
+  background: var(--international-orange);
+  color: #fff;
+}
+
+.repo-count-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 1px 6px;
+  font-size: 9px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: all 0.2s;
 }
 
 /* SWISS CASE STUDY MODULAR GRID */
@@ -510,9 +573,29 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 40px;
+  position: relative;
 }
 
-/* TACTILE PAPER CASE STUDY CARD */
+/* STAGGERED BLUEPRINT CARD ENTRANCE ANIMATION */
+@keyframes blueprintUnfold {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.92) rotate(var(--initial-rot, -3deg));
+    filter: blur(3px);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.015) rotate(calc(var(--target-rot, 0deg) * 1.5));
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(var(--target-rot, 0deg));
+    filter: blur(0);
+  }
+}
+
+/* TACTILE PAPER CASE STUDY CARD WITH ENTRANCE & HOVER PEEL */
 .paper-case-card {
   position: relative;
   background-color: var(--paper-cream);
@@ -528,16 +611,33 @@ body {
     75% 99.5%, 50% 100%, 25% 99.4%, 0% 100%,
     0.6% 75%, 0% 50%, 0.5% 25%
   );
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  animation: blueprintUnfold 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.06s);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
 
 .paper-case-card:hover {
-  transform: translateY(-6px) rotate(0.4deg);
+  transform: translateY(-10px) scale(1.025) rotate(0.8deg) !important;
   box-shadow: 
-    0 28px 45px -8px var(--paper-shadow),
-    0 4px 10px rgba(0, 0, 0, 0.18);
+    0 35px 65px -12px var(--paper-shadow),
+    0 6px 16px rgba(0, 0, 0, 0.22);
+  z-index: 20;
+}
+
+.paper-case-card:hover .masking-tape {
+  transform: rotate(var(--tape-hover-rot, 6deg)) translateY(-3px);
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.paper-case-card:hover .schematic-preview-box {
+  border-color: #38bdf8;
+  box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.25);
+  transition: all 0.3s ease;
 }
 
 .card-spec-tag {
@@ -810,3 +910,4 @@ body {
     padding: 32px 24px;
   }
 }
+

@@ -203,12 +203,18 @@
           </div>
         </div>
 
-        <!-- Architectural Filters -->
-        <div class="blueprint-filter-bar">
-          <button class="dwg-filter-btn active">ALL SCHEMATICS</button>
-          <button class="dwg-filter-btn">SYSTEMS ARCHITECTURE</button>
-          <button class="dwg-filter-btn">INTERACTIVE ENGINES</button>
-          <button class="dwg-filter-btn">CLIENT APPLICATIONS</button>
+        <!-- Architectural Controls: Search & Dynamic Filters -->
+        <div class="blueprint-controls-wrap">
+          <div class="blueprint-search-box">
+            <span>🔍</span>
+            <input type="text" id="blueprint-search-input" placeholder="SEARCH DWG NO / REPO / STACK..." autocomplete="off">
+          </div>
+          <div id="active-repos-count" style="font-family: var(--font-mono); font-size: 11px; color: var(--international-orange); font-weight: bold;">
+            LOADING ALL DRAWINGS...
+          </div>
+          <div class="blueprint-filter-bar" id="blueprint-filters-container">
+            <!-- Dynamic language buttons rendered by js/blueprint.js -->
+          </div>
         </div>
 
         <!-- Dynamic Swiss Grid Case Study Cards Container -->

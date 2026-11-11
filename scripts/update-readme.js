@@ -55,14 +55,16 @@ const LANG_BADGES = {
 async function update() {
   console.log(`📡 Fetching live repositories for ${USERNAME}...`);
   try {
-    const repos = await fetchJson(`https://api.github.com/users/${USERNAME}/repos?sort=updated&direction=desc&per_page=12`);
+    const repos = await fetchJson(`https://api.github.com/users/${USERNAME}/repos?sort=updated&direction=desc&per_page=100`);
 
     if (!Array.isArray(repos)) {
       console.error('Failed to fetch repos, API returned:', repos);
       return;
     }
 
-    const publicRepos = repos.filter(r => !r.fork).slice(0, 6);
+    // Keep all public non-fork repositories
+    let publicRepos = repos.filter(r => !r.fork);
+    if (publicRepos.length === 0) publicRepos = repos;
 
     let markdown = '| ⚡ Project / Repository | 🛠️ Tech Stack | ⭐ Stars | 🕒 Last Pushed |\n';
     markdown += '| :--- | :--- | :---: | :--- |\n';
