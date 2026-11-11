@@ -1,202 +1,168 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 540" width="360" height="460">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="320" height="384">
   <defs>
-    <!-- Gradients -->
-    <linearGradient id="lanyardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="50%" stop-color="#1e1b4b" />
-      <stop offset="100%" stop-color="#0284c7" />
+    <linearGradient id="strapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#27272a" />
+      <stop offset="100%" stop-color="#18181b" />
     </linearGradient>
 
-    <linearGradient id="badgeBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f3ff" />
-      <stop offset="50%" stop-color="#ff0055" />
-      <stop offset="100%" stop-color="#fcee0a" />
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#27272a" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4" />
     </linearGradient>
 
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1322" />
-      <stop offset="100%" stop-color="#060911" />
+    <linearGradient id="cardSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121319" />
+      <stop offset="100%" stop-color="#090a0f" />
     </linearGradient>
 
-    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fcee0a" />
-      <stop offset="100%" stop-color="#d97706" />
-    </linearGradient>
-
-    <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
-      <stop offset="50%" stop-color="rgba(0,243,255,0.25)" />
-      <stop offset="100%" stop-color="rgba(255,0,85,0.15)" />
-    </linearGradient>
-
-    <!-- Filters -->
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
     </filter>
   </defs>
 
   <style>
-    @keyframes badgeSwing {
-      0% { transform: rotate(3.5deg); }
-      50% { transform: rotate(-3.5deg); }
-      100% { transform: rotate(3.5deg); }
+    @keyframes gentleSwing {
+      0% { transform: rotate(2deg); }
+      50% { transform: rotate(-2deg); }
+      100% { transform: rotate(2deg); }
     }
-
-    @keyframes livePulse {
-      0% { r: 5; opacity: 1; }
-      50% { r: 8; opacity: 0.4; }
-      100% { r: 5; opacity: 1; }
+    @keyframes statusBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
     }
-
-    @keyframes sheenMove {
-      0% { transform: translateY(-120px) rotate(25deg); opacity: 0; }
-      40% { opacity: 0.7; }
-      100% { transform: translateY(450px) rotate(25deg); opacity: 0; }
+    .swinger {
+      transform-origin: 200px 0px;
+      animation: gentleSwing 5s ease-in-out infinite;
     }
-
-    .swinging-group {
-      transform-origin: 210px 0px;
-      animation: badgeSwing 4s ease-in-out infinite;
-    }
-
-    .pulse-ring {
-      animation: livePulse 2s ease-in-out infinite;
-    }
-
-    .sheen-bar {
-      animation: sheenMove 5s linear infinite;
+    .blink {
+      animation: statusBlink 2.5s ease-in-out infinite;
     }
   </style>
 
-  <!-- Top Wall Mount Clip -->
-  <rect x="185" y="0" width="50" height="14" rx="4" fill="#1e293b" stroke="#00f3ff" stroke-width="1.5" />
-  <circle cx="210" cy="7" r="3.5" fill="#64748b" />
+  <!-- Ceiling Mount Anchor -->
+  <rect x="180" y="0" width="40" height="10" rx="3" fill="#27272a" />
+  <circle cx="200" cy="5" r="2.5" fill="#71717a" />
 
-  <!-- Entire Hanging Assembly with Pendulum Swing -->
-  <g class="swinging-group">
-    <!-- Lanyard Strap -->
-    <path d="M 202 12 L 200 95 L 220 95 L 218 12 Z" fill="url(#lanyardGrad)" />
-    <!-- Cyberpunk stitching on strap -->
-    <line x1="203" y1="12" x2="201" y2="95" stroke="#00f3ff" stroke-width="1" stroke-dasharray="3,3" />
-    <line x1="217" y1="12" x2="219" y2="95" stroke="#00f3ff" stroke-width="1" stroke-dasharray="3,3" />
+  <g class="swinger">
+    <!-- Minimalist Black Woven Strap -->
+    <path d="M 193 8 L 192 85 L 208 85 L 207 8 Z" fill="url(#strapGrad)" />
+    <!-- Fine side stitching -->
+    <line x1="194" y1="8" x2="193" y2="85" stroke="#3f3f46" stroke-width="0.8" stroke-dasharray="2,2" />
+    <line x1="206" y1="8" x2="207" y2="85" stroke="#3f3f46" stroke-width="0.8" stroke-dasharray="2,2" />
 
-    <!-- Metal Lobster Clasp / Swivel Hook -->
-    <circle cx="210" cy="98" r="8" fill="#475569" stroke="#94a3b8" stroke-width="2" />
-    <circle cx="210" cy="98" r="4" fill="#0b0f19" />
-    <rect x="206" y="104" width="8" height="14" rx="2" fill="#64748b" stroke="#94a3b8" stroke-width="1" />
-    
-    <!-- Clip connecting into Card Slot -->
-    <path d="M 205 116 C 205 124, 215 124, 215 116 Z" fill="#94a3b8" />
+    <!-- Matte Black Metal Swivel Hook & Ring -->
+    <circle cx="200" cy="90" r="7" fill="none" stroke="#52525b" stroke-width="2.5" />
+    <rect x="197" y="96" width="6" height="12" rx="1.5" fill="#3f3f46" />
+    <path d="M 196 107 C 196 114, 204 114, 204 107 Z" fill="#52525b" />
 
-    <!-- 3D Hanging Badge Card Body -->
-    <g transform="translate(60, 122)">
-      <!-- Card Glow & Outer Rim -->
-      <rect x="0" y="0" width="300" height="400" rx="20" fill="url(#cardBg)" stroke="url(#badgeBorder)" stroke-width="2.5" filter="url(#neonGlow)" />
+    <!-- Badge Card (Sleek Engineer ID) -->
+    <g transform="translate(65, 112)" filter="url(#softShadow)">
+      <!-- Card Body -->
+      <rect x="0" y="0" width="270" height="350" rx="16" fill="url(#cardSurface)" stroke="url(#cardBorder)" stroke-width="1.2" />
 
-      <!-- Card Clip Slot Hole -->
-      <rect x="130" y="10" width="40" height="8" rx="4" fill="#060911" stroke="#334155" stroke-width="1.5" />
+      <!-- Lanyard Slot Punch Hole -->
+      <rect x="115" y="8" width="40" height="6" rx="3" fill="#090a0f" stroke="#27272a" stroke-width="1" />
 
-      <!-- VIP Header -->
-      <g transform="translate(20, 32)">
-        <!-- Gold Chip -->
-        <rect x="0" y="0" width="36" height="26" rx="4" fill="url(#chipGrad)" stroke="#b45309" stroke-width="1" />
-        <line x1="12" y1="0" x2="12" y2="26" stroke="#92400e" stroke-width="1" />
-        <line x1="24" y1="0" x2="24" y2="26" stroke="#92400e" stroke-width="1" />
-        <line x1="0" y1="13" x2="36" y2="13" stroke="#92400e" stroke-width="1" />
+      <!-- Header: Minimalist Org / Badge Type -->
+      <text x="24" y="38" fill="#71717a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="1.5">ENGINEER PASS</text>
+      <text x="246" y="38" text-anchor="end" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">DEV-2026</text>
 
-        <!-- Clearance Title -->
-        <text x="50" y="12" fill="#00f3ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" letter-spacing="1">ACCESS PASS: VIP</text>
-        <text x="50" y="24" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="1">SECURITY: LEVEL 5</text>
+      <line x1="24" y1="48" x2="246" y2="48" stroke="#1f2430" stroke-width="1" />
+
+      <!-- Avatar Photo Placeholder -->
+      <g transform="translate(24, 62)">
+        <rect x="0" y="0" width="70" height="70" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1" />
+        <!-- Sleek silhouette icon -->
+        <circle cx="35" cy="28" r="14" fill="#3f3f46" />
+        <path d="M 15 62 C 15 48, 55 48, 55 62 Z" fill="#3f3f46" />
       </g>
 
-      <!-- Center Avatar Frame -->
-      <g transform="translate(100, 78)">
-        <circle cx="50" cy="50" r="48" fill="#0f172a" stroke="#00f3ff" stroke-width="2.5" />
-        <!-- Cyber Gamer Graphic Avatar inside -->
-        <circle cx="50" cy="40" r="22" fill="#1e293b" />
-        <path d="M 22 84 C 22 62, 78 62, 78 84 Z" fill="#1e293b" />
-        <!-- Cyber Visor Glasses -->
-        <rect x="36" y="34" width="28" height="9" rx="3" fill="#ff0055" filter="url(#neonGlow)" />
-        <line x1="38" y1="38" x2="62" y2="38" stroke="#fcee0a" stroke-width="1.5" />
-
-        <!-- Live Status Pulse -->
-        <circle class="pulse-ring" cx="84" cy="84" r="6" fill="#10b981" />
-        <circle cx="84" cy="84" r="5" fill="#10b981" stroke="#060911" stroke-width="2" />
+      <!-- Primary Info -->
+      <g transform="translate(106, 68)">
+        <text x="0" y="16" fill="#f4f4f5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Shamith R</text>
+        <text x="0" y="32" fill="#71717a" font-family="'JetBrains Mono', monospace" font-size="10">@rshamith777-cpu</text>
+        <text x="0" y="52" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">Full-Stack Engineer</text>
       </g>
 
-      <!-- Name & Title -->
-      <text x="150" y="205" text-anchor="middle" fill="#ffffff" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="900" letter-spacing="1">SHAMITH R</text>
-      <text x="150" y="224" text-anchor="middle" fill="#ff0055" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold">@rshamith777-cpu</text>
-
-      <!-- Rank Badge -->
-      <g transform="translate(65, 238)">
-        <rect x="0" y="0" width="170" height="24" rx="12" fill="rgba(0, 243, 255, 0.12)" stroke="#00f3ff" stroke-width="1.2" />
-        <text x="85" y="16" text-anchor="middle" fill="#00f3ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" letter-spacing="1">LVL 42 // ARCHITECT</text>
-      </g>
-
-      <!-- Stats Grid -->
-      <g transform="translate(20, 276)">
-        <rect x="0" y="0" width="260" height="52" rx="10" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+      <!-- Live Git Activity Strip -->
+      <g transform="translate(24, 150)">
+        <rect x="0" y="0" width="222" height="42" rx="8" fill="#18181b" stroke="#27272a" stroke-width="0.8" />
         
-        <text x="45" y="24" text-anchor="middle" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">ACTIVE</text>
-        <text x="45" y="40" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8">STATUS</text>
+        <!-- Status Indicator -->
+        <circle class="blink" cx="16" cy="21" r="4" fill="#22c55e" />
+        <text x="28" y="24" fill="#e4e4e7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">Status:</text>
+        <text x="68" y="24" fill="#a1a1aa" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Available for builds</text>
 
-        <line x1="90" y1="10" x2="90" y2="42" stroke="rgba(255, 255, 255, 0.1)" />
-
-        <text x="130" y="24" text-anchor="middle" fill="#fcee0a" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">FULL-STACK</text>
-        <text x="130" y="40" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8">CLASS</text>
-
-        <line x1="175" y1="10" x2="175" y2="42" stroke="rgba(255, 255, 255, 0.1)" />
-
-        <text x="215" y="24" text-anchor="middle" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="bold">ONLINE</text>
-        <text x="215" y="40" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8">RADAR</text>
+        <text x="210" y="24" text-anchor="end" fill="#71717a" font-family="'JetBrains Mono', monospace" font-size="9">GIT-LIVE</text>
       </g>
 
-      <!-- Barcode Footer -->
-      <g transform="translate(45, 345)">
-        <rect x="0" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="5" y="0" width="4" height="24" fill="#cbd5e1" />
-        <rect x="12" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="16" y="0" width="6" height="24" fill="#cbd5e1" />
-        <rect x="25" y="0" width="3" height="24" fill="#cbd5e1" />
-        <rect x="31" y="0" width="1" height="24" fill="#cbd5e1" />
-        <rect x="35" y="0" width="5" height="24" fill="#cbd5e1" />
-        <rect x="43" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="48" y="0" width="6" height="24" fill="#cbd5e1" />
-        <rect x="57" y="0" width="3" height="24" fill="#cbd5e1" />
-        <rect x="63" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="68" y="0" width="4" height="24" fill="#cbd5e1" />
-        <rect x="75" y="0" width="6" height="24" fill="#cbd5e1" />
-        <rect x="84" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="89" y="0" width="4" height="24" fill="#cbd5e1" />
-        <rect x="96" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="101" y="0" width="5" height="24" fill="#cbd5e1" />
-        <rect x="109" y="0" width="3" height="24" fill="#cbd5e1" />
-        <rect x="115" y="0" width="6" height="24" fill="#cbd5e1" />
-        <rect x="124" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="129" y="0" width="4" height="24" fill="#cbd5e1" />
-        <rect x="136" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="141" y="0" width="6" height="24" fill="#cbd5e1" />
-        <rect x="150" y="0" width="3" height="24" fill="#cbd5e1" />
-        <rect x="156" y="0" width="5" height="24" fill="#cbd5e1" />
-        <rect x="164" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="169" y="0" width="4" height="24" fill="#cbd5e1" />
-        <rect x="176" y="0" width="6" height="24" fill="#cbd5e1" />
-        <rect x="185" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="190" y="0" width="5" height="24" fill="#cbd5e1" />
-        <rect x="198" y="0" width="2" height="24" fill="#cbd5e1" />
-        <rect x="203" y="0" width="4" height="24" fill="#cbd5e1" />
+      <!-- Focus Areas -->
+      <g transform="translate(24, 210)">
+        <text x="0" y="0" fill="#71717a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" letter-spacing="1">SPECIALIZATIONS</text>
         
-        <text x="105" y="36" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="2">GIT-777-ACCESS-PASS-2026</text>
+        <!-- Tag Pills -->
+        <rect x="0" y="10" width="95" height="20" rx="4" fill="#18181b" stroke="#27272a" stroke-width="0.8" />
+        <text x="47" y="23" text-anchor="middle" fill="#d4d4d8" font-family="'JetBrains Mono', monospace" font-size="9">Web Systems</text>
+
+        <rect x="102" y="10" width="120" height="20" rx="4" fill="#18181b" stroke="#27272a" stroke-width="0.8" />
+        <text x="162" y="23" text-anchor="middle" fill="#d4d4d8" font-family="'JetBrains Mono', monospace" font-size="9">Interactive Canvas</text>
+
+        <rect x="0" y="36" width="85" height="20" rx="4" fill="#18181b" stroke="#27272a" stroke-width="0.8" />
+        <text x="42" y="49" text-anchor="middle" fill="#d4d4d8" font-family="'JetBrains Mono', monospace" font-size="9">TypeScript</text>
+
+        <rect x="92" y="36" width="80" height="20" rx="4" fill="#18181b" stroke="#27272a" stroke-width="0.8" />
+        <text x="132" y="49" text-anchor="middle" fill="#d4d4d8" font-family="'JetBrains Mono', monospace" font-size="9">Node.js</text>
       </g>
 
-      <!-- Holographic Diagonal Sheen Layer -->
-      <g clip-path="url(#cardClip)">
-        <rect class="sheen-bar" x="-100" y="-100" width="500" height="40" fill="url(#sheenGrad)" />
+      <!-- Minimal Barcode -->
+      <g transform="translate(24, 290)">
+        <line x1="0" y1="0" x2="222" y2="0" stroke="#1f2430" stroke-width="1" />
+        
+        <g transform="translate(0, 14)">
+          <rect x="0" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="4" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="9" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="13" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="20" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="25" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="28" y="0" width="5" height="18" fill="#71717a" />
+          <rect x="36" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="41" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="48" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="52" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="58" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="63" y="0" width="5" height="18" fill="#71717a" />
+          <rect x="71" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="75" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="81" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="86" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="93" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="97" y="0" width="5" height="18" fill="#71717a" />
+          <rect x="105" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="110" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="116" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="121" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="128" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="132" y="0" width="5" height="18" fill="#71717a" />
+          <rect x="140" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="145" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="151" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="158" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="162" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="168" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="173" y="0" width="5" height="18" fill="#71717a" />
+          <rect x="181" y="0" width="1" height="18" fill="#71717a" />
+          <rect x="185" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="192" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="197" y="0" width="3" height="18" fill="#71717a" />
+          <rect x="203" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="208" y="0" width="4" height="18" fill="#71717a" />
+          <rect x="215" y="0" width="2" height="18" fill="#71717a" />
+          <rect x="219" y="0" width="3" height="18" fill="#71717a" />
+        </g>
+        <text x="222" y="42" text-anchor="end" fill="#52525b" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="1">ID: 777-RSHAMITH-AUTH</text>
       </g>
     </g>
   </g>
