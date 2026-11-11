@@ -1,0 +1,396 @@
+/**
+ * Game, Arcade, Quest Achievements & Terminal HUD Styles
+ */
+
+/* MODAL OVERLAY WRAPPER */
+.game-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(5, 7, 13, 0.88);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.game-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ARCADE CABINET WRAPPER */
+.arcade-cabinet {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  background: #090c15;
+  border: 2px solid var(--neon-cyan, #00f3ff);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.3),
+              inset 0 0 15px rgba(0, 243, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.arcade-marquee {
+  background: linear-gradient(90deg, #180828, #051622);
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--neon-pink, #ff0055);
+}
+
+.arcade-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arcade-neon-title {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--neon-cyan, #00f3ff);
+}
+
+.arcade-scores-hud {
+  display: flex;
+  gap: 20px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #fff;
+}
+
+.arcade-scores-hud span {
+  color: var(--neon-yellow, #fcee0a);
+  font-weight: bold;
+}
+
+.arcade-close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 6px;
+  transition: color 0.2s;
+}
+
+.arcade-close-btn:hover {
+  color: #ff0055;
+}
+
+/* CRT Screen Effect */
+.arcade-screen-container {
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.arcade-screen-container::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 10;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+#arcade-canvas {
+  display: block;
+  max-width: 100%;
+  touch-action: none;
+}
+
+.arcade-controls-footer {
+  padding: 12px 20px;
+  background: #06080e;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.arcade-restart-btn {
+  padding: 6px 14px;
+  background: var(--neon-pink, #ff0055);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
+
+/* TROPHY CASE / ACHIEVEMENTS MODAL */
+.trophy-modal-box {
+  width: 100%;
+  max-width: 680px;
+  background: #0a0e1a;
+  border: 1px solid rgba(0, 243, 255, 0.4);
+  border-radius: 16px;
+  padding: 24px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.trophy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+}
+
+.trophy-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.trophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.trophy-card {
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.trophy-card.unlocked {
+  border-color: rgba(0, 243, 255, 0.5);
+  background: rgba(0, 243, 255, 0.05);
+}
+
+.trophy-card.locked {
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+.trophy-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.trophy-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.trophy-desc {
+  font-size: 10px;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.trophy-status {
+  font-size: 9px;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--neon-cyan, #00f3ff);
+}
+
+/* INTERACTIVE HACKER TERMINAL */
+.terminal-modal-box {
+  width: 100%;
+  max-width: 700px;
+  background: #040808;
+  border: 1px solid #00ff66;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 102, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 460px;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.term-topbar {
+  background: #0a140e;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 255, 102, 0.3);
+}
+
+.term-title {
+  font-size: 12px;
+  color: #00ff66;
+  letter-spacing: 1px;
+}
+
+.term-content {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  color: #d1fae5;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.term-line {
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.term-prompt {
+  color: #00ff66;
+  font-weight: bold;
+}
+
+.cmd-hl {
+  color: #fcee0a;
+  font-weight: bold;
+}
+
+.term-error {
+  color: #ff0055;
+}
+
+.term-input-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: #08100b;
+  border-top: 1px solid rgba(0, 255, 102, 0.2);
+}
+
+.term-input-row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+/* CYBER TOAST NOTIFICATIONS */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.cyber-toast {
+  position: relative;
+  background: #0e1526;
+  border: 1px solid var(--neon-cyan, #00f3ff);
+  border-radius: 10px;
+  padding: 14px 18px;
+  min-width: 280px;
+  max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 243, 255, 0.2);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  pointer-events: auto;
+  animation: toast-slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.cyber-toast.fade-out {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.3s ease;
+}
+
+@keyframes toast-slide-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.toast-glow-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--neon-cyan, #00f3ff);
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-tag {
+  font-size: 9px;
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--neon-yellow, #fcee0a);
+  letter-spacing: 1px;
+}
+
+.toast-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.toast-msg {
+  font-size: 11px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.toast-close:hover {
+  color: #fff;
+}
