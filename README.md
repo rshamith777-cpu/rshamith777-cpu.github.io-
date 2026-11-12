@@ -35,9 +35,9 @@
 
 | ⚡ Project / Repository | 🛠️ Tech Stack | ⭐ Stars | 🕒 Last Pushed |
 | :--- | :--- | :---: | :--- |
-| [**rshamith777-cpu.github.io-**](https://github.com/rshamith777-cpu/rshamith777-cpu.github.io-) `🔥 RECENT` | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `0 mins ago` |
-| [**percepta**](https://github.com/rshamith777-cpu/percepta)<br><sub>Percepta: Physical-world multimodal vision copilot with real-time AR bullse...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `1 hrs ago` |
-| [**hakku-ai**](https://github.com/rshamith777-cpu/hakku-ai)<br><sub>🏛️ Hakku 5.0 (ಹಕ್ಕು / हक़) — Sovereign Citizen Welfare Discovery & Statuto...</sub> | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `7 hrs ago` |
+| [**rshamith777-cpu.github.io-**](https://github.com/rshamith777-cpu/rshamith777-cpu.github.io-) `🔥 RECENT` | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `6 hrs ago` |
+| [**percepta**](https://github.com/rshamith777-cpu/percepta)<br><sub>Percepta: Physical-world multimodal vision copilot with real-time AR bullse...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `7 hrs ago` |
+| [**hakku-ai**](https://github.com/rshamith777-cpu/hakku-ai)<br><sub>🏛️ Hakku 5.0 (ಹಕ್ಕು / हक़) — Sovereign Citizen Welfare Discovery & Statuto...</sub> | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `13 hrs ago` |
 | [**AIML_1_ImageClassification_byte**](https://github.com/rshamith777-cpu/AIML_1_ImageClassification_byte)<br><sub>Cats vs Dogs image classifier using TensorFlow/Keras and MobileNetV2 transf...</sub> | <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" /> | ⭐ `0` | 🕒 `10 days ago` |
 | [**AIML_2_SpamClassifier_byte**](https://github.com/rshamith777-cpu/AIML_2_SpamClassifier_byte)<br><sub>End-to-end binary NLP spam SMS classification pipeline using TF-IDF & Logis...</sub> | <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" /> | ⭐ `0` | 🕒 `10 days ago` |
 | [**AIML_3_CustomerSegmentation_byte**](https://github.com/rshamith777-cpu/AIML_3_CustomerSegmentation_byte)<br><sub>Customer Segmentation & Behavioral Profiling using K-Means Clustering (k=5,...</sub> | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> | ⭐ `0` | 🕒 `10 days ago` |
@@ -79,7 +79,7 @@
 | [**LinkSphere**](https://github.com/rshamith777-cpu/LinkSphere)<br><sub>**LinkSphere**: An AI-powered SaaS Link Intelligence Platform featuring sma...</sub> | <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" /> | ⭐ `1` | 🕒 `6/14/2026` |
 | [**ChatSphere**](https://github.com/rshamith777-cpu/ChatSphere)<br><sub>An intelligent, client-side real-time workspace built with React & Vite. Po...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `1` | 🕒 `6/19/2026` |
 
-*Last auto-synchronized with GitHub on: `Wed, 11 Nov 2026 22:32:26 GMT`*
+*Last auto-synchronized with GitHub on: `Thu, 12 Nov 2026 04:38:10 GMT`*
 
 <!-- RECENT_REPOS:END -->
 
