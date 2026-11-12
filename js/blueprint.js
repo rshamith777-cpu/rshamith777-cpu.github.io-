@@ -278,17 +278,26 @@ function renderBlueprintCards(repos, container) {
     const dwgNum = `DWG-${String(i + 1).padStart(2, '0')}`;
     const lotNum = `LOT-77${(i % 9) + 1}`;
     
-    // Natural subtle rotation variations (-0.8deg to +0.8deg)
-    const targetRot = ((i % 5) - 2) * 0.4;
+    // Natural subtle rotation variations
+    const targetRot = ((i % 5) - 2) * 0.35;
     const initialRot = targetRot - 2.5;
     const tapeRot = (i % 2 === 0 ? 3.5 : -4);
     const tapeHoverRot = tapeRot > 0 ? tapeRot + 2.5 : tapeRot - 2.5;
+
+    // Cover color palette variations in blueprint palette
+    const coverColors = [
+      '#07355D', // Blueprint Navy
+      '#0C4A7F', // Royal Blueprint
+      '#082E50', // Deep Indigo
+      '#052642'  // Cyanotype Ink
+    ];
+    const coverBg = coverColors[i % coverColors.length];
 
     // Procedural schematic SVG based on index
     const schematicSvg = generateSchematicSvg(repo, i);
 
     return `
-      <div class="paper-case-card" style="
+      <div class="book-case-study-card" style="
         --card-index: ${i};
         --initial-rot: ${initialRot}deg;
         --target-rot: ${targetRot}deg;
@@ -300,21 +309,62 @@ function renderBlueprintCards(repos, container) {
         <!-- Orange Barcode Spec Sticker -->
         <div class="card-spec-tag">SPEC NO: ${dwgNum} // ${lotNum}</div>
 
-        <!-- CAD Blueprint Schematic Preview Box -->
-        <div class="schematic-preview-box">
-          ${schematicSvg}
+        <!-- 3D Book Viewport Stage (Framer Guide-OWKi Component) -->
+        <div class="book-viewport">
+          <div class="book-3d" 
+            data-title="${escapeHtml(repo.name)}" 
+            data-dwg="${dwgNum}"
+            data-desc="${escapeHtml(repo.description || 'Full architectural case study and structural technical breakdown.')}"
+            data-link="${repo.html_url}"
+            data-lang="${repo.language || 'TypeScript'}">
+
+            <!-- Book Back Cover with Deep Cast Shadow -->
+            <div class="book-back-cover"></div>
+
+            <!-- 3D Stacked Page Thickness (Right & Bottom Edges) -->
+            <div class="book-pages-right"></div>
+            <div class="book-pages-bottom"></div>
+
+            <!-- Orange Ribbon Bookmark -->
+            <div class="book-ribbon"></div>
+
+            <!-- Book Front Cover -->
+            <div class="book-front-cover" style="background: ${coverBg};">
+              <!-- Spine Crease & Lighting Fold (Framer spec) -->
+              <div class="book-spine-crease"></div>
+
+              <div class="book-cover-top">
+                <span class="book-spec-label">VOL. 2026 // MANUAL</span>
+                <span class="book-dwg-badge">${dwgNum}</span>
+              </div>
+
+              <div class="book-cover-title">
+                ${escapeHtml(repo.name)}
+              </div>
+
+              <!-- Schematic Illustration Etched on Cover -->
+              <div class="book-cover-schematic">
+                ${schematicSvg}
+              </div>
+
+              <div class="book-cover-footer">
+                <span>${(repo.language || 'CODE').toUpperCase()}</span>
+                <span>⭐ ${repo.stargazers_count || 0} STARS</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h3 class="case-card-title">${repo.name}</h3>
+        <h3 class="case-card-title">${escapeHtml(repo.name)}</h3>
         <p class="case-card-desc">
-          ${repo.description || 'Architectural repository and modular implementation. Inspect schematics for technical specifications.'}
+          ${escapeHtml(repo.description || 'Architectural repository and modular implementation. Inspect schematics for technical specifications.')}
         </p>
 
         <div class="case-spec-chips">
           <span class="spec-chip orange-accent">${repo.language || 'Code'}</span>
           <span class="spec-chip">⭐ ${repo.stargazers_count || 0} STARS</span>
           <span class="spec-chip">FORKS: ${repo.forks_count || 0}</span>
-          <span class="spec-chip">VERIFIED</span>
+          <span class="spec-chip">SPEC 1.0</span>
         </div>
 
         <div class="case-card-footer">
@@ -324,16 +374,53 @@ function renderBlueprintCards(repos, container) {
             data-desc="${escapeHtml(repo.description || 'Full architectural case study and structural technical breakdown.')}"
             data-link="${repo.html_url}"
             data-lang="${repo.language || 'TypeScript'}">
-            <span>📐</span> CASE STUDY
+            <span>📐</span> OPEN GUIDE
           </button>
-          <span class="dwg-rev-num">REV: 0${(i % 3) + 1}</span>
+          <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="case-study-trigger" style="background: transparent; color: var(--matte-black); border: 1.2px solid var(--matte-black);">
+            <span>📦</span> REPO
+          </a>
         </div>
       </div>
     `;
   }).join('');
 
+  // Attach interactive click and 3D parallax to books
+  init3DBookInteractions();
+
   // Re-bind modal triggers
   initCaseStudyModals();
+}
+
+/**
+ * 9. Interactive 3D Book Parallax & Click Trigger
+ */
+function init3DBookInteractions() {
+  document.querySelectorAll('.book-viewport').forEach(viewport => {
+    const book = viewport.querySelector('.book-3d');
+    if (!book) return;
+
+    // Click on the 3D book triggers the case study modal
+    book.addEventListener('click', () => {
+      const modalTrigger = viewport.closest('.book-case-study-card')?.querySelector('.case-study-trigger');
+      if (modalTrigger) modalTrigger.click();
+    });
+
+    // Subtle 3D tilt tracking on mousemove over the book viewport
+    viewport.addEventListener('mousemove', (e) => {
+      const rect = viewport.getBoundingClientRect();
+      const normX = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
+      const normY = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
+
+      const tiltY = -35 + normX * 12;
+      const tiltX = 4 - normY * 12;
+
+      book.style.transform = `rotateY(${tiltY}deg) rotateX(${tiltX}deg) translateZ(45px)`;
+    });
+
+    viewport.addEventListener('mouseleave', () => {
+      book.style.transform = '';
+    });
+  });
 }
 
 /**
