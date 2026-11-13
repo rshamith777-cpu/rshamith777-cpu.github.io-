@@ -35,9 +35,9 @@
 
 | ⚡ Project / Repository | 🛠️ Tech Stack | ⭐ Stars | 🕒 Last Pushed |
 | :--- | :--- | :---: | :--- |
-| [**claimrail**](https://github.com/rshamith777-cpu/claimrail) `🔥 RECENT`<br><sub>Autonomous banking dispute console for Federal Regulation E (12 CFR § 1005....</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `3 hrs ago` |
-| [**pact-paypal**](https://github.com/rshamith777-cpu/pact-paypal)<br><sub>"PayPal can hold money. It cannot tell if the work is real." Conditional se...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `4 hrs ago` |
-| [**rshamith777-cpu.github.io-**](https://github.com/rshamith777-cpu/rshamith777-cpu.github.io-) | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `8 hrs ago` |
+| [**claimrail**](https://github.com/rshamith777-cpu/claimrail) `🔥 RECENT`<br><sub>Autonomous banking dispute console for Federal Regulation E (12 CFR § 1005....</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `8 hrs ago` |
+| [**pact-paypal**](https://github.com/rshamith777-cpu/pact-paypal)<br><sub>"PayPal can hold money. It cannot tell if the work is real." Conditional se...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `9 hrs ago` |
+| [**rshamith777-cpu.github.io-**](https://github.com/rshamith777-cpu/rshamith777-cpu.github.io-) | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `4 hrs ago` |
 | [**percepta**](https://github.com/rshamith777-cpu/percepta)<br><sub>Percepta: Physical-world multimodal vision copilot with real-time AR bullse...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `0` | 🕒 `1 days ago` |
 | [**hakku-ai**](https://github.com/rshamith777-cpu/hakku-ai)<br><sub>🏛️ Hakku 5.0 (ಹಕ್ಕು / हक़) — Sovereign Citizen Welfare Discovery & Statuto...</sub> | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> | ⭐ `0` | 🕒 `1 days ago` |
 | [**AIML_1_ImageClassification_byte**](https://github.com/rshamith777-cpu/AIML_1_ImageClassification_byte)<br><sub>Cats vs Dogs image classifier using TensorFlow/Keras and MobileNetV2 transf...</sub> | <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" /> | ⭐ `0` | 🕒 `11 days ago` |
@@ -81,7 +81,7 @@
 | [**LinkSphere**](https://github.com/rshamith777-cpu/LinkSphere)<br><sub>**LinkSphere**: An AI-powered SaaS Link Intelligence Platform featuring sma...</sub> | <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" /> | ⭐ `1` | 🕒 `6/14/2026` |
 | [**ChatSphere**](https://github.com/rshamith777-cpu/ChatSphere)<br><sub>An intelligent, client-side real-time workspace built with React & Vite. Po...</sub> | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> | ⭐ `1` | 🕒 `6/19/2026` |
 
-*Last auto-synchronized with GitHub on: `Thu, 12 Nov 2026 22:56:15 GMT`*
+*Last auto-synchronized with GitHub on: `Fri, 13 Nov 2026 03:50:30 GMT`*
 
 <!-- RECENT_REPOS:END -->
 
